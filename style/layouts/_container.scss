@@ -1,18 +1,21 @@
+@use "sass:map";
+@use "../abstracts/index" as *;
+
 .container {
-  inline-size: 375px;
+  inline-size: px-to-rem(375);
   min-block-size: 100vh;
   display: flex;
   align-items: center;
 
-  @media only screen and (min-width: 600px) {
-    inline-size: 600px;
+  @media only screen and (min-width: map.get($breakPoints, sm)) {
+    inline-size: px-to-rem(600);
   }
 
-  @media only screen and (min-width: 992px) {
-    inline-size: 992px;
+  @media only screen and (min-width: map.get($breakPoints, md)) {
+    inline-size: px-to-rem(880);
   }
 
-  @media only screen and (min-width: 1200px) {
-    inline-size: 1200px;
+  @media only screen and (min-width: map.get($breakPoints, lg)) {
+    inline-size: px-to-rem(1100);
   }
 }

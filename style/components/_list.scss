@@ -7,11 +7,11 @@
   inline-size: 100%;
   justify-content: space-between;
 
-  @media only screen and (min-width: 600px) {
+  @media only screen and (min-width: map.get($breakPoints, sm)) {
     justify-content: space-around;
   }
 
-  @media only screen and (min-width: 1200px) {
+  @media only screen and (min-width: map.get($breakPoints, lg)) {
     display: flex;
     flex-direction: column;
     row-gap: map.get($spacing, 4);

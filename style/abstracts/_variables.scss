@@ -1,6 +1,12 @@
+@use "./utils.scss" as *;
+
+$baseFontSize: 18px;
+
 /* -------------- Break point modifier --------------*/
 $breakPoints: (
-  sm: 600px,
+  sm: px-to-rem(600),
+  md: px-to-rem(992),
+  lg: px-to-rem(1200),
 );
 
 /*
