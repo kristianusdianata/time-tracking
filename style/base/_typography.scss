@@ -2,7 +2,7 @@
 @use "../abstracts/index" as *;
 
 html {
-  font-size: calc($baseFontSize / 16px) * 100%;
+  font-size: px-to-percent();
 }
 
 h1 {

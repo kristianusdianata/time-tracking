@@ -1,6 +1,4 @@
-@use "./utils.scss" as *;
-
-$baseFontSize: 18px;
+@use "./converter" as *;
 
 /* -------------- Break point modifier --------------*/
 $breakPoints: (
