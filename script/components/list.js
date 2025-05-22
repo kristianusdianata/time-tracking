@@ -19,7 +19,7 @@ export async function generateListContent() {
       <li>
         <button
           class="text-list text-list--normal text-purple-500 text-white--hover text-white--active ${defaultActive}"
-          href="#"
+          type="button"
           >${title}</button
         >
       </li>  

@@ -66,7 +66,7 @@ export async function generateCardContent() {
             <div class="wrapper-content bg-navy-900 bg-navy-500--hover">
               <div class="header">
                 <h2 class="text-white">${title}</h2>
-                <button>
+                <button type="button" aria-label="menu">
                   <ion-icon
                     class="text-navy-200"
                     name="ellipsis-horizontal"
