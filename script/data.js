@@ -2,7 +2,7 @@ import { toCamelCase } from "./utils.js";
 
 const data = async () => {
   try {
-    const response = await fetch("../data.json");
+    const response = await fetch(new URL("../data.json", import.meta.url));
 
     // cek response
     if (!response.ok) {
