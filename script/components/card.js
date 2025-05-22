@@ -70,6 +70,7 @@ export async function generateCardContent() {
                   <ion-icon
                     class="text-navy-200"
                     name="ellipsis-horizontal"
+                    aria-hidden="true"
                   ></ion-icon>
                 </button>
               </div>
