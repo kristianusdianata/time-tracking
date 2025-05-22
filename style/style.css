@@ -420,15 +420,15 @@ h2 {
 }
 
 /* -------------- Font weight --------------*/
-.text-light {
+.font-light {
   font-weight: 300;
 }
 
-.text-normal {
+.font-normal {
   font-weight: 400;
 }
 
-.text-bold {
+.font-bold {
   font-weight: 500;
 }
 
@@ -439,13 +439,13 @@ h2 {
   background-color: var(--purple-600);
 }
 
-.text-purple-600 {
+.purple-600 {
   color: var(--purple-600);
 }
-.text-purple-600--hover:hover {
+.purple-600--hover:hover {
   color: var(--purple-600);
 }
-.text-purple-600--active.active {
+.purple-600--active.active {
   color: var(--purple-600) !important;
 }
 
@@ -456,13 +456,13 @@ h2 {
   background-color: var(--orange-300);
 }
 
-.text-orange-300 {
+.orange-300 {
   color: var(--orange-300);
 }
-.text-orange-300--hover:hover {
+.orange-300--hover:hover {
   color: var(--orange-300);
 }
-.text-orange-300--active.active {
+.orange-300--active.active {
   color: var(--orange-300) !important;
 }
 
@@ -473,13 +473,13 @@ h2 {
   background-color: var(--blue-300);
 }
 
-.text-blue-300 {
+.blue-300 {
   color: var(--blue-300);
 }
-.text-blue-300--hover:hover {
+.blue-300--hover:hover {
   color: var(--blue-300);
 }
-.text-blue-300--active.active {
+.blue-300--active.active {
   color: var(--blue-300) !important;
 }
 
@@ -490,13 +490,13 @@ h2 {
   background-color: var(--pink-400);
 }
 
-.text-pink-400 {
+.pink-400 {
   color: var(--pink-400);
 }
-.text-pink-400--hover:hover {
+.pink-400--hover:hover {
   color: var(--pink-400);
 }
-.text-pink-400--active.active {
+.pink-400--active.active {
   color: var(--pink-400) !important;
 }
 
@@ -507,13 +507,13 @@ h2 {
   background-color: var(--green-400);
 }
 
-.text-green-400 {
+.green-400 {
   color: var(--green-400);
 }
-.text-green-400--hover:hover {
+.green-400--hover:hover {
   color: var(--green-400);
 }
-.text-green-400--active.active {
+.green-400--active.active {
   color: var(--green-400) !important;
 }
 
@@ -524,13 +524,13 @@ h2 {
   background-color: var(--purple-700);
 }
 
-.text-purple-700 {
+.purple-700 {
   color: var(--purple-700);
 }
-.text-purple-700--hover:hover {
+.purple-700--hover:hover {
   color: var(--purple-700);
 }
-.text-purple-700--active.active {
+.purple-700--active.active {
   color: var(--purple-700) !important;
 }
 
@@ -541,13 +541,13 @@ h2 {
   background-color: var(--yellow-300);
 }
 
-.text-yellow-300 {
+.yellow-300 {
   color: var(--yellow-300);
 }
-.text-yellow-300--hover:hover {
+.yellow-300--hover:hover {
   color: var(--yellow-300);
 }
-.text-yellow-300--active.active {
+.yellow-300--active.active {
   color: var(--yellow-300) !important;
 }
 
@@ -558,13 +558,13 @@ h2 {
   background-color: var(--navy-950);
 }
 
-.text-navy-950 {
+.navy-950 {
   color: var(--navy-950);
 }
-.text-navy-950--hover:hover {
+.navy-950--hover:hover {
   color: var(--navy-950);
 }
-.text-navy-950--active.active {
+.navy-950--active.active {
   color: var(--navy-950) !important;
 }
 
@@ -575,13 +575,13 @@ h2 {
   background-color: var(--navy-900);
 }
 
-.text-navy-900 {
+.navy-900 {
   color: var(--navy-900);
 }
-.text-navy-900--hover:hover {
+.navy-900--hover:hover {
   color: var(--navy-900);
 }
-.text-navy-900--active.active {
+.navy-900--active.active {
   color: var(--navy-900) !important;
 }
 
@@ -592,13 +592,13 @@ h2 {
   background-color: var(--navy-500);
 }
 
-.text-navy-500 {
+.navy-500 {
   color: var(--navy-500);
 }
-.text-navy-500--hover:hover {
+.navy-500--hover:hover {
   color: var(--navy-500);
 }
-.text-navy-500--active.active {
+.navy-500--active.active {
   color: var(--navy-500) !important;
 }
 
@@ -609,13 +609,13 @@ h2 {
   background-color: var(--purple-500);
 }
 
-.text-purple-500 {
+.purple-500 {
   color: var(--purple-500);
 }
-.text-purple-500--hover:hover {
+.purple-500--hover:hover {
   color: var(--purple-500);
 }
-.text-purple-500--active.active {
+.purple-500--active.active {
   color: var(--purple-500) !important;
 }
 
@@ -626,13 +626,13 @@ h2 {
   background-color: var(--navy-200);
 }
 
-.text-navy-200 {
+.navy-200 {
   color: var(--navy-200);
 }
-.text-navy-200--hover:hover {
+.navy-200--hover:hover {
   color: var(--navy-200);
 }
-.text-navy-200--active.active {
+.navy-200--active.active {
   color: var(--navy-200) !important;
 }
 
@@ -643,13 +643,13 @@ h2 {
   background-color: var(--white);
 }
 
-.text-white {
+.white {
   color: var(--white);
 }
-.text-white--hover:hover {
+.white--hover:hover {
   color: var(--white);
 }
-.text-white--active.active {
+.white--active.active {
   color: var(--white) !important;
 }
 

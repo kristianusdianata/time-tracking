@@ -21,19 +21,17 @@ $modifiers: (hover, active);
   }
 
   // font color classes
-  .text- {
-    &#{"" + $name} {
-      color: var(--#{$name});
-    }
+  .#{"" + $name} {
+    color: var(--#{$name});
 
     // modifier
     @each $modifier in $modifiers {
       @if $modifier == hover {
-        &#{"" + $name}--#{$modifier}:hover {
+        &--#{$modifier}:hover {
           color: var(--#{$name});
         }
       } @else if $modifier == active {
-        &#{"" + $name}--#{$modifier}.active {
+        &--#{$modifier}.active {
           color: var(--#{$name}) !important;
         }
       }
