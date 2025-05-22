@@ -1,0 +1,88 @@
+@use "sass:map";
+@use "../abstracts/index" as *;
+
+/* -------------- Text --------------*/
+$texts: (
+  muted: (
+    sizes: (
+      default: map.get($font, sm),
+    ),
+    truncate: 1,
+  ),
+  list: (
+    sizes: (
+      default: map.get($font, md),
+    ),
+    truncate: 1,
+  ),
+  pretitle: (
+    sizes: (
+      default: map.get($font, sm),
+    ),
+    truncate: 1,
+  ),
+  highlight: (
+    sizes: (
+      default: map.get($font, xl),
+      sm: map.get($font, 4xl),
+    ),
+    truncate: 1,
+  ),
+);
+
+@each $text, $value in $texts {
+  $sizes: map.get($value, sizes);
+  $truncate: map.get($value, truncate);
+  $weights: map.get($value, weights);
+
+  .text-#{$text} {
+    @include truncate-lines(#{$truncate});
+    font-size: map.get($sizes, default);
+
+    // Break point
+    @each $breakPoint, $textSize in $sizes {
+      @if $breakPoint != default {
+        @media only screen and (min-width: map.get($breakPoints, #{$breakPoint})) {
+          & {
+            font-size: #{$textSize};
+          }
+        }
+      }
+    }
+  }
+}
+
+/* -------------- Text align --------------*/
+$positions: (start, center, end);
+
+@each $position in $positions {
+  .text- {
+    &#{$position} {
+      text-align: #{$position};
+    }
+
+    // Modifier
+    @each $breakpoint, $value in $breakPoints {
+      @media only screen and (min-width: #{$value}) {
+        &#{$position}--#{$breakpoint} {
+          text-align: $position !important;
+        }
+      }
+    }
+  }
+}
+
+/* -------------- Font weight --------------*/
+$weights: (
+  light: 300,
+  normal: 400,
+  bold: 500,
+);
+
+@each $weight, $value in $weights {
+  .text- {
+    &#{$weight} {
+      font-weight: #{$value};
+    }
+  }
+}

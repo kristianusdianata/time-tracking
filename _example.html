@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <!-- Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Font end -->
+
+    <!-- css -->
+    <link rel="stylesheet" href="./style/style.css" />
+    <!-- css end -->
+
+    <!-- js -->
+    <script defer src="./script/index.js" type="module"></script>
+    <!-- js end -->
+
+    <!-- Ionic -->
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
+    <!-- Ionic end -->
+
+    <title>Frontend Mentor | Time tracking dashboard</title>
+  </head>
+  <body class="bg-navy-950">
+    <div class="container">
+      <main>
+        <article class="container-card">
+          <header class="card card--profile bg-navy-900">
+            <div class="header bg-purple-600">
+              <div class="header__image">
+                <img
+                  src="./images/image-jeremy.png"
+                  alt="User image"
+                  class="border-ring-solid text-white"
+                />
+              </div>
+              <h1 class="text-white">
+                <span
+                  class="text-pretitle text-pretitle--normal text-navy-200"
+                  style="display: block"
+                  >Report for</span
+                >
+                Jeremy Robson
+              </h1>
+            </div>
+            <div class="body">
+              <ul class="list-menu">
+                <li>
+                  <a
+                    class="text-list text-list--normal text-purple-500 text-white--hover text-white--active"
+                    href=""
+                    >Daily</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="text-list text-list--normal text-purple-500 text-white--hover text-white--active active"
+                    href=""
+                    >Weekly</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="text-list text-list--normal text-purple-500 text-white--hover text-white--active"
+                    href=""
+                    >Monthly</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </header>
+          <section class="card card--content bg-orange-300" id="work">
+            <div class="wrapper-content bg-navy-900 bg-navy-500--hover">
+              <div class="header">
+                <h2 class="text-white">Work</h2>
+                <a href="#" role="button">
+                  <ion-icon
+                    class="text-navy-200"
+                    name="ellipsis-horizontal"
+                  ></ion-icon>
+                </a>
+              </div>
+              <div class="body">
+                <time
+                  datetime="PT32H"
+                  class="text-highlight text-light text-white flex-basis-100--sm flex-basis-50"
+                  >32hrs</time
+                >
+                <span
+                  class="text-muted text-muted--normal text-navy-200 flex-basis-100--sm flex-basis-50 text-end text-start--sm text-center--md"
+                  >Last Week - 36hrs</span
+                >
+              </div>
+            </div>
+          </section>
+          <section class="card card--content bg-blue-300" id="play">
+            <div class="wrapper-content bg-navy-900 bg-navy-500--hover">
+              <div class="header">
+                <h2 class="text-white">Play</h2>
+                <a href="#" role="button">
+                  <ion-icon
+                    class="text-navy-200"
+                    name="ellipsis-horizontal"
+                  ></ion-icon>
+                </a>
+              </div>
+              <div class="body">
+                <time
+                  datetime="PT10H"
+                  class="text-highlight text-light text-white flex-basis-100--sm flex-basis-50"
+                  >10hrs</time
+                >
+                <span
+                  class="text-muted text-muted--normal text-navy-200 flex-basis-100--sm flex-basis-50 text-end text-start--sm"
+                  >Last Week - 8hrs</span
+                >
+              </div>
+            </div>
+          </section>
+          <section class="card card--content bg-pink-400" id="study">
+            <div class="wrapper-content bg-navy-900 bg-navy-500--hover">
+              <div class="header">
+                <h2 class="text-white">Study</h2>
+                <a href="#" role="button">
+                  <ion-icon
+                    class="text-navy-200"
+                    name="ellipsis-horizontal"
+                  ></ion-icon>
+                </a>
+              </div>
+              <div class="body">
+                <time
+                  datetime="PT4H"
+                  class="text-highlight text-light text-white flex-basis-100--sm flex-basis-50"
+                  >4hrs</time
+                >
+                <span
+                  class="text-muted text-muted--normal text-navy-200 flex-basis-100--sm flex-basis-50 text-end text-start--sm"
+                  >Last Week - 7hrs</span
+                >
+              </div>
+            </div>
+          </section>
+          <section class="card card--content bg-green-400" id="exercise">
+            <div class="wrapper-content bg-navy-900 bg-navy-500--hover">
+              <div class="header">
+                <h2 class="text-white">Exercise</h2>
+                <a href="#" role="button">
+                  <ion-icon
+                    class="text-navy-200"
+                    name="ellipsis-horizontal"
+                  ></ion-icon>
+                </a>
+              </div>
+              <div class="body">
+                <time
+                  datetime="PT4H"
+                  class="text-highlight text-light text-white flex-basis-100--sm flex-basis-50"
+                  >4hrs</time
+                >
+                <span
+                  class="text-muted text-muted--normal text-navy-200 flex-basis-100--sm flex-basis-50 text-end text-start--sm"
+                  >Last Week - 5hrs</span
+                >
+              </div>
+            </div>
+          </section>
+          <section class="card card--content bg-purple-700" id="social">
+            <div class="wrapper-content bg-navy-900 bg-navy-500--hover">
+              <div class="header">
+                <h2 class="text-white">Social</h2>
+                <a href="#" role="button">
+                  <ion-icon
+                    class="text-navy-200"
+                    name="ellipsis-horizontal"
+                  ></ion-icon>
+                </a>
+              </div>
+              <div class="body">
+                <time
+                  datetime="PT5H"
+                  class="text-highlight text-light text-white flex-basis-100--sm flex-basis-50"
+                  >5hrs</time
+                >
+                <span
+                  class="text-muted text-muted--normal text-navy-200 flex-basis-100--sm flex-basis-50 text-end text-start--sm"
+                  >Last Week - 10hrs</span
+                >
+              </div>
+            </div>
+          </section>
+          <section class="card card--content bg-yellow-300" id="self-care">
+            <div class="wrapper-content bg-navy-900 bg-navy-500--hover">
+              <div class="header">
+                <h2 class="text-white">Self Care</h2>
+                <a href="#" role="button">
+                  <ion-icon
+                    class="text-navy-200"
+                    name="ellipsis-horizontal"
+                  ></ion-icon>
+                </a>
+              </div>
+              <div class="body">
+                <time
+                  datetime="PT2H"
+                  class="text-highlight text-light text-white flex-basis-100--sm flex-basis-50"
+                  >2hrs</time
+                >
+                <span
+                  class="text-muted text-muted--normal text-navy-200 flex-basis-100--sm flex-basis-50 text-end text-start--sm"
+                  >Last Week - 2hrs</span
+                >
+              </div>
+            </div>
+          </section>
+        </article>
+      </main>
+    </div>
+  </body>
+</html>

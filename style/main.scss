@@ -1,0 +1,14 @@
+// base
+@use "./base/index" as base;
+
+// layouts
+@use "./layouts/index.scss" as layout;
+
+// component
+@use "./components/index" as component;
+
+// modules
+@use "./modules/index" as module;
+
+// utilities
+@use "../style/utilities/index" as util;

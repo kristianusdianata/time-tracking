@@ -1,0 +1,19 @@
+@use "sass:map";
+@use "../abstracts/index" as *;
+
+.list-menu {
+  display: inline-flex;
+  flex-direction: row;
+  inline-size: 100%;
+  justify-content: space-between;
+
+  @media only screen and (min-width: 600px) {
+    justify-content: space-around;
+  }
+
+  @media only screen and (min-width: 1200px) {
+    display: flex;
+    flex-direction: column;
+    row-gap: map.get($spacing, 4);
+  }
+}

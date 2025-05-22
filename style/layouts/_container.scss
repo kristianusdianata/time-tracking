@@ -1,0 +1,18 @@
+.container {
+  inline-size: 375px;
+  min-block-size: 100vh;
+  display: flex;
+  align-items: center;
+
+  @media only screen and (min-width: 600px) {
+    inline-size: 600px;
+  }
+
+  @media only screen and (min-width: 992px) {
+    inline-size: 992px;
+  }
+
+  @media only screen and (min-width: 1200px) {
+    inline-size: 1200px;
+  }
+}

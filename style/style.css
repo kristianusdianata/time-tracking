@@ -1,0 +1,648 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* -------------- Break point modifier --------------*/
+/*
+-------------------------------------------------
+    Color
+-------------------------------------------------
+*/
+/*
+-------------------------------------------------
+  Color end
+-------------------------------------------------
+*/
+/*
+-------------------------------------------------
+    Font size
+    using Major Third scale ~1.25
+-------------------------------------------------
+*/
+/*
+-------------------------------------------------
+    Font size end
+-------------------------------------------------
+*/
+/*
+-------------------------------------------------
+    Margin & padding
+    based on 4px rhythm
+-------------------------------------------------
+*/
+/*
+-------------------------------------------------
+    Margin & padding end
+-------------------------------------------------
+*/
+/*
+-------------------------------------------------
+    Radius
+-------------------------------------------------
+*/
+/*
+-------------------------------------------------
+    Radius end
+-------------------------------------------------
+*/
+:root {
+  --purple-600: hsl(246, 80%, 60%);
+  --orange-300: hsl(15, 100%, 70%);
+  --blue-300: hsl(195, 74%, 62%);
+  --pink-400: hsl(348, 100%, 68%);
+  --green-400: hsl(145, 58%, 55%);
+  --purple-700: hsl(264, 64%, 52%);
+  --yellow-300: hsl(43, 84%, 65%);
+  --navy-950: hsl(226, 43%, 10%);
+  --navy-900: hsl(235, 46%, 20%);
+  --navy-500: hsl(235, 41%, 34%);
+  --purple-500: hsl(235, 45%, 61%);
+  --navy-200: hsl(236, 100%, 87%);
+  --white: hsl(136, 0%, 100%);
+}
+
+body {
+  display: flex;
+  justify-content: center;
+}
+
+main {
+  inline-size: 100%;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  display: block;
+  inline-size: 100%;
+  block-size: 100%;
+  object-fit: contain;
+}
+
+html {
+  font-size: 112.5%;
+}
+
+body {
+  font-family: "Rubik", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+
+h1 {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-size: 1.25rem;
+  font-weight: 300;
+}
+@media only screen and (min-width: 600px) {
+  h1 {
+    font-size: 1.563rem;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  h1 {
+    font-size: 1.953rem;
+  }
+}
+
+h2 {
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-size: 1rem;
+  font-weight: 400;
+}
+
+.container {
+  inline-size: 375px;
+  min-block-size: 100vh;
+  display: flex;
+  align-items: center;
+}
+@media only screen and (min-width: 600px) {
+  .container {
+    inline-size: 600px;
+  }
+}
+@media only screen and (min-width: 992px) {
+  .container {
+    inline-size: 992px;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .container {
+    inline-size: 1200px;
+  }
+}
+
+.list-menu {
+  display: inline-flex;
+  flex-direction: row;
+  inline-size: 100%;
+  justify-content: space-between;
+}
+@media only screen and (min-width: 600px) {
+  .list-menu {
+    justify-content: space-around;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .list-menu {
+    display: flex;
+    flex-direction: column;
+    row-gap: 1rem;
+  }
+}
+
+.container-card {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(1, minmax(0, 1fr));
+  gap: 1.5rem;
+  margin: 1rem;
+}
+@media only screen and (min-width: 600px) {
+  .container-card {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+@media only screen and (min-width: 992px) {
+  .container-card {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .container-card {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+}
+.container-card .card {
+  border-radius: 1rem;
+  overflow: hidden;
+  min-inline-size: 0;
+  inline-size: 100%;
+}
+.container-card .card.card--profile {
+  grid-column: 1;
+  grid-row: 1/span 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+@media only screen and (min-width: 600px) {
+  .container-card .card.card--profile {
+    grid-column: 1/span 2;
+    grid-row: 1;
+  }
+}
+@media only screen and (min-width: 992px) {
+  .container-card .card.card--profile {
+    grid-column: 1/span 3;
+    grid-row: 1;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .container-card .card.card--profile {
+    grid-column: 1;
+    grid-row: 1/span 2;
+  }
+}
+.container-card .card.card--profile .header {
+  display: inline-flex;
+  padding: 1.5rem;
+  align-items: center;
+  column-gap: 1rem;
+  border-end-start-radius: 1rem;
+  border-end-end-radius: 1rem;
+}
+@media only screen and (min-width: 1200px) {
+  .container-card .card.card--profile .header {
+    display: flex;
+    flex-direction: column;
+    row-gap: 2rem;
+    block-size: 100%;
+    align-items: start;
+  }
+}
+.container-card .card.card--profile .header .header__image {
+  inline-size: 70px;
+}
+@media only screen and (min-width: 1200px) {
+  .container-card .card.card--profile .header .header__image {
+    inline-size: 78px;
+  }
+}
+.container-card .card.card--profile .body {
+  padding: 1.5rem;
+}
+.container-card .card.card--content {
+  background-repeat: no-repeat;
+  background-size: 4.3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  overflow: hidden;
+  block-size: 9.35rem;
+}
+@media only screen and (min-width: 600px) {
+  .container-card .card.card--content {
+    block-size: 12.8rem;
+  }
+}
+.container-card .card.card--content#work {
+  background-image: url(../images/icon-work.svg);
+  background-position: 90% -7%;
+}
+.container-card .card.card--content#play {
+  background-image: url(../images/icon-play.svg);
+  background-position: 90% -4.5%;
+}
+.container-card .card.card--content#study {
+  background-image: url(../images/icon-study.svg);
+  background-position: 90% -4.5%;
+}
+.container-card .card.card--content#exercise {
+  background-image: url(../images/icon-exercise.svg);
+  background-position: 90% 0%;
+}
+.container-card .card.card--content#social {
+  background-image: url(../images/icon-social.svg);
+  background-position: 90% -13%;
+}
+.container-card .card.card--content#self-care {
+  background-image: url(../images/icon-self-care.svg);
+  background-position: 90% -12%;
+}
+.container-card .card.card--content .wrapper-content {
+  border-start-start-radius: 1rem;
+  border-start-end-radius: 1rem;
+  padding: 1.5rem;
+  cursor: pointer;
+}
+.container-card .card.card--content .wrapper-content .header {
+  inline-size: 100%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-block-end: 1rem;
+}
+.container-card .card.card--content .wrapper-content .body {
+  display: flex;
+  flex-direction: column;
+  row-gap: 0.5rem;
+}
+@media only screen and (max-width: 600px) {
+  .container-card .card.card--content .wrapper-content .body {
+    display: inline-flex;
+    flex-direction: row;
+    align-items: center;
+    inline-size: 100%;
+    justify-content: space-between;
+  }
+}
+
+/* -------------- Text --------------*/
+.text-muted {
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-size: 0.8rem;
+}
+
+.text-list {
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-size: 1rem;
+}
+
+.text-pretitle {
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-size: 0.8rem;
+}
+
+.text-highlight {
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-size: 1.563rem;
+}
+@media only screen and (min-width: 600px) {
+  .text-highlight {
+    font-size: 3.052rem;
+  }
+}
+
+/* -------------- Text align --------------*/
+.text-start {
+  text-align: start;
+}
+@media only screen and (min-width: 600px) {
+  .text-start--sm {
+    text-align: start !important;
+  }
+}
+
+.text-center {
+  text-align: center;
+}
+@media only screen and (min-width: 600px) {
+  .text-center--sm {
+    text-align: center !important;
+  }
+}
+
+.text-end {
+  text-align: end;
+}
+@media only screen and (min-width: 600px) {
+  .text-end--sm {
+    text-align: end !important;
+  }
+}
+
+/* -------------- Font weight --------------*/
+.text-light {
+  font-weight: 300;
+}
+
+.text-normal {
+  font-weight: 400;
+}
+
+.text-bold {
+  font-weight: 500;
+}
+
+.bg-purple-600 {
+  background-color: hsl(246, 80%, 60%);
+}
+.bg-purple-600--hover:hover {
+  background-color: hsl(246, 80%, 60%);
+}
+
+.text-purple-600 {
+  color: hsl(246, 80%, 60%);
+}
+.text-purple-600--hover:hover {
+  color: hsl(246, 80%, 60%);
+}
+.text-purple-600--active.active {
+  color: hsl(246, 80%, 60%) !important;
+}
+
+.bg-orange-300 {
+  background-color: hsl(15, 100%, 70%);
+}
+.bg-orange-300--hover:hover {
+  background-color: hsl(15, 100%, 70%);
+}
+
+.text-orange-300 {
+  color: hsl(15, 100%, 70%);
+}
+.text-orange-300--hover:hover {
+  color: hsl(15, 100%, 70%);
+}
+.text-orange-300--active.active {
+  color: hsl(15, 100%, 70%) !important;
+}
+
+.bg-blue-300 {
+  background-color: hsl(195, 74%, 62%);
+}
+.bg-blue-300--hover:hover {
+  background-color: hsl(195, 74%, 62%);
+}
+
+.text-blue-300 {
+  color: hsl(195, 74%, 62%);
+}
+.text-blue-300--hover:hover {
+  color: hsl(195, 74%, 62%);
+}
+.text-blue-300--active.active {
+  color: hsl(195, 74%, 62%) !important;
+}
+
+.bg-pink-400 {
+  background-color: hsl(348, 100%, 68%);
+}
+.bg-pink-400--hover:hover {
+  background-color: hsl(348, 100%, 68%);
+}
+
+.text-pink-400 {
+  color: hsl(348, 100%, 68%);
+}
+.text-pink-400--hover:hover {
+  color: hsl(348, 100%, 68%);
+}
+.text-pink-400--active.active {
+  color: hsl(348, 100%, 68%) !important;
+}
+
+.bg-green-400 {
+  background-color: hsl(145, 58%, 55%);
+}
+.bg-green-400--hover:hover {
+  background-color: hsl(145, 58%, 55%);
+}
+
+.text-green-400 {
+  color: hsl(145, 58%, 55%);
+}
+.text-green-400--hover:hover {
+  color: hsl(145, 58%, 55%);
+}
+.text-green-400--active.active {
+  color: hsl(145, 58%, 55%) !important;
+}
+
+.bg-purple-700 {
+  background-color: hsl(264, 64%, 52%);
+}
+.bg-purple-700--hover:hover {
+  background-color: hsl(264, 64%, 52%);
+}
+
+.text-purple-700 {
+  color: hsl(264, 64%, 52%);
+}
+.text-purple-700--hover:hover {
+  color: hsl(264, 64%, 52%);
+}
+.text-purple-700--active.active {
+  color: hsl(264, 64%, 52%) !important;
+}
+
+.bg-yellow-300 {
+  background-color: hsl(43, 84%, 65%);
+}
+.bg-yellow-300--hover:hover {
+  background-color: hsl(43, 84%, 65%);
+}
+
+.text-yellow-300 {
+  color: hsl(43, 84%, 65%);
+}
+.text-yellow-300--hover:hover {
+  color: hsl(43, 84%, 65%);
+}
+.text-yellow-300--active.active {
+  color: hsl(43, 84%, 65%) !important;
+}
+
+.bg-navy-950 {
+  background-color: hsl(226, 43%, 10%);
+}
+.bg-navy-950--hover:hover {
+  background-color: hsl(226, 43%, 10%);
+}
+
+.text-navy-950 {
+  color: hsl(226, 43%, 10%);
+}
+.text-navy-950--hover:hover {
+  color: hsl(226, 43%, 10%);
+}
+.text-navy-950--active.active {
+  color: hsl(226, 43%, 10%) !important;
+}
+
+.bg-navy-900 {
+  background-color: hsl(235, 46%, 20%);
+}
+.bg-navy-900--hover:hover {
+  background-color: hsl(235, 46%, 20%);
+}
+
+.text-navy-900 {
+  color: hsl(235, 46%, 20%);
+}
+.text-navy-900--hover:hover {
+  color: hsl(235, 46%, 20%);
+}
+.text-navy-900--active.active {
+  color: hsl(235, 46%, 20%) !important;
+}
+
+.bg-navy-500 {
+  background-color: hsl(235, 41%, 34%);
+}
+.bg-navy-500--hover:hover {
+  background-color: hsl(235, 41%, 34%);
+}
+
+.text-navy-500 {
+  color: hsl(235, 41%, 34%);
+}
+.text-navy-500--hover:hover {
+  color: hsl(235, 41%, 34%);
+}
+.text-navy-500--active.active {
+  color: hsl(235, 41%, 34%) !important;
+}
+
+.bg-purple-500 {
+  background-color: hsl(235, 45%, 61%);
+}
+.bg-purple-500--hover:hover {
+  background-color: hsl(235, 45%, 61%);
+}
+
+.text-purple-500 {
+  color: hsl(235, 45%, 61%);
+}
+.text-purple-500--hover:hover {
+  color: hsl(235, 45%, 61%);
+}
+.text-purple-500--active.active {
+  color: hsl(235, 45%, 61%) !important;
+}
+
+.bg-navy-200 {
+  background-color: hsl(236, 100%, 87%);
+}
+.bg-navy-200--hover:hover {
+  background-color: hsl(236, 100%, 87%);
+}
+
+.text-navy-200 {
+  color: hsl(236, 100%, 87%);
+}
+.text-navy-200--hover:hover {
+  color: hsl(236, 100%, 87%);
+}
+.text-navy-200--active.active {
+  color: hsl(236, 100%, 87%) !important;
+}
+
+.bg-white {
+  background-color: hsl(136, 0%, 100%);
+}
+.bg-white--hover:hover {
+  background-color: hsl(136, 0%, 100%);
+}
+
+.text-white {
+  color: hsl(136, 0%, 100%);
+}
+.text-white--hover:hover {
+  color: hsl(136, 0%, 100%);
+}
+.text-white--active.active {
+  color: hsl(136, 0%, 100%) !important;
+}
+
+.border-ring-solid {
+  border-radius: 50%;
+  border-width: 3px;
+  border-style: solid;
+}
+
+.flex-basis-100 {
+  flex-basis: 100%;
+}
+@media only screen and (min-width: 600px) {
+  .flex-basis-100--sm {
+    flex-basis: 100% !important;
+  }
+}
+
+.flex-basis-50 {
+  flex-basis: 50%;
+}
+@media only screen and (min-width: 600px) {
+  .flex-basis-50--sm {
+    flex-basis: 50% !important;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

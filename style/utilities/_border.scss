@@ -1,0 +1,8 @@
+@use "sass:map";
+@use "../abstracts/index" as *;
+
+.border-ring-solid {
+  border-radius: map.get($radius, full);
+  border-width: 3px;
+  border-style: solid;
+}
