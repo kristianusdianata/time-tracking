@@ -18,7 +18,7 @@ export async function generateListContent() {
     list_content.push(`
       <li>
         <button
-          class="text-list text-list--normal text-purple-500 text-white--hover text-white--active ${defaultActive}"
+          class="text-list font-normal purple-500 white--hover white--active ${defaultActive}"
           type="button"
           >${title}</button
         >

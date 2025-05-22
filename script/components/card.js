@@ -65,10 +65,10 @@ export async function generateCardContent() {
         <section class="card card--content ${backgroundColor}" id=${generatedId}>
             <div class="wrapper-content bg-navy-900 bg-navy-500--hover">
               <div class="header">
-                <h2 class="text-white">${title}</h2>
+                <h2 class="white">${title}</h2>
                 <button type="button" aria-label="menu">
                   <ion-icon
-                    class="text-navy-200"
+                    class="navy-200"
                     name="ellipsis-horizontal"
                     aria-hidden="true"
                   ></ion-icon>
@@ -77,11 +77,11 @@ export async function generateCardContent() {
               <div class="body">
                 <time
                   datetime="PT${timeframe.current}H"
-                  class="text-highlight text-light text-white flex-basis-100--sm flex-basis-50"
+                  class="text-highlight font-light white flex-basis-100--sm flex-basis-50"
                   >${timeframe.current}hrs</time
                 >
                 <span
-                  class="text-muted text-muted--normal text-navy-200 flex-basis-100--sm flex-basis-50 text-end text-start--sm"
+                  class="text-muted font-normal navy-200 flex-basis-100--sm flex-basis-50 text-end text-start--sm"
                   >${generateText(active_menu)} - ${
       timeframe.previous
     }hrs</span>
