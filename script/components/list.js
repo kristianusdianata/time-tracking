@@ -17,10 +17,10 @@ export async function generateListContent() {
 
     list_content.push(`
       <li>
-        <a
+        <button
           class="text-list text-list--normal text-purple-500 text-white--hover text-white--active ${defaultActive}"
           href="#"
-          >${title}</a
+          >${title}</button
         >
       </li>  
     `);
@@ -35,7 +35,7 @@ export async function generateListContent() {
 
   // insert list_menu to header_body
   header_body.insertAdjacentHTML("afterbegin", list_menu);
-  header_nav = header_body.querySelectorAll("ul.list-menu li a");
+  header_nav = header_body.querySelectorAll("ul.list-menu li button");
 }
 
 export function getActiveMenu() {
