@@ -33,7 +33,6 @@ $texts: (
 @each $text, $value in $texts {
   $sizes: map.get($value, sizes);
   $truncate: map.get($value, truncate);
-  $weights: map.get($value, weights);
 
   .text-#{$text} {
     @include truncate-lines(#{$truncate});
