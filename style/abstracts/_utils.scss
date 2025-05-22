@@ -1,7 +1,8 @@
 @use "sass:math";
+@use "./variables" as *;
 
-@function px-to-rem($px, $base-font-size: 18) {
-  $value: math.div($px, $base-font-size) * 1rem;
+@function px-to-rem($px) {
+  $value: math.div($px, $baseFontSize) * 1rem;
   $rounded: math.div(math.round($value * 100), 100);
   @return $rounded;
 }
