@@ -8,10 +8,10 @@
   flex-direction: column;
   justify-content: end;
   overflow: hidden;
-  padding-top: px-to-em(36px);
+  padding-block-start: px-to-em(36px);
 
   @include media-query-sm() {
-    padding-top: px-to-em(43px);
+    padding-block-start: px-to-em(43px);
   }
 
   &__wrapper {

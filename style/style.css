@@ -308,11 +308,11 @@ h2 {
   flex-direction: column;
   justify-content: end;
   overflow: hidden;
-  padding-top: 2em;
+  padding-block-start: 2em;
 }
 @media (min-width: 33.33rem) {
   .work {
-    padding-top: 2.39em;
+    padding-block-start: 2.39em;
   }
 }
 .work__wrapper {
@@ -418,11 +418,11 @@ h2 {
   flex-direction: column;
   justify-content: end;
   overflow: hidden;
-  padding-top: 2em;
+  padding-block-start: 2em;
 }
 @media (min-width: 33.33rem) {
   .play {
-    padding-top: 2.39em;
+    padding-block-start: 2.39em;
   }
 }
 .play__wrapper {
@@ -528,11 +528,11 @@ h2 {
   flex-direction: column;
   justify-content: end;
   overflow: hidden;
-  padding-top: 2em;
+  padding-block-start: 2em;
 }
 @media (min-width: 33.33rem) {
   .study {
-    padding-top: 2.39em;
+    padding-block-start: 2.39em;
   }
 }
 .study__wrapper {
@@ -638,11 +638,11 @@ h2 {
   flex-direction: column;
   justify-content: end;
   overflow: hidden;
-  padding-top: 2em;
+  padding-block-start: 2em;
 }
 @media (min-width: 33.33rem) {
   .exercise {
-    padding-top: 2.39em;
+    padding-block-start: 2.39em;
   }
 }
 .exercise__wrapper {
@@ -748,11 +748,11 @@ h2 {
   flex-direction: column;
   justify-content: end;
   overflow: hidden;
-  padding-top: 2em;
+  padding-block-start: 2em;
 }
 @media (min-width: 33.33rem) {
   .social {
-    padding-top: 2.39em;
+    padding-block-start: 2.39em;
   }
 }
 .social__wrapper {
@@ -858,11 +858,11 @@ h2 {
   flex-direction: column;
   justify-content: end;
   overflow: hidden;
-  padding-top: 2em;
+  padding-block-start: 2em;
 }
 @media (min-width: 33.33rem) {
   .self-care {
-    padding-top: 2.39em;
+    padding-block-start: 2.39em;
   }
 }
 .self-care__wrapper {
