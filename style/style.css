@@ -213,7 +213,6 @@ h2 {
   line-clamp: 3;
 }
 .profile__title-variant {
-  display: block;
   font-size: 0.61em;
   font-weight: 400;
   color: var(--navy-200);

@@ -43,7 +43,6 @@
     @include line-clamp(3);
 
     &-variant {
-      display: block;
       font-size: px-to-em(11px);
       font-weight: 400;
       color: var(--navy-200);
