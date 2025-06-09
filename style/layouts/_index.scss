@@ -1,1 +1,22 @@
-@forward "container";
+@use "sass:map";
+@use "../abstracts/index" as *;
+
+.container {
+  inline-size: px-to-rem(375px);
+  min-block-size: 100vh;
+  display: flex;
+  align-items: center;
+  margin: map.get($spacing, 4);
+
+  @include media-query-sm() {
+    inline-size: px-to-rem(600px);
+  }
+
+  @include media-query-md() {
+    inline-size: px-to-rem(880px);
+  }
+
+  @include media-query-lg() {
+    inline-size: px-to-rem(1100px);
+  }
+}

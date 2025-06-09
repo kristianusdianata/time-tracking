@@ -1,6 +1,23 @@
-import { generateCardContent } from "./components/card.js";
-import { generateListContent, setActiveMenu } from "./components/list.js";
+import { menu, time } from "./components/index.js";
 
-await generateListContent();
-await generateCardContent();
-await setActiveMenu();
+async function main() {
+  const timeComponent = await time();
+  const menuComponent = await menu();
+
+  function generateContent() {
+    menuComponent.generateContent(timeComponent.generateContent);
+  }
+
+  function setActiveMenu() {
+    menuComponent.setActiveMenu(timeComponent.updateLabelContents);
+  }
+
+  return {
+    generateContent,
+    setActiveMenu,
+  };
+}
+
+const timeTracking = await main();
+timeTracking.generateContent();
+timeTracking.setActiveMenu();

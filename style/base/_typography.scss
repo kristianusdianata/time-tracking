@@ -2,25 +2,15 @@
 @use "../abstracts/index" as *;
 
 html {
-  font-size: px-to-percent();
+  font-size: px-to-percent(18px);
 }
 
 h1 {
-  @include truncate-lines(3);
-  font-size: map.get($font, lg);
-  font-weight: 300;
-
-  @media only screen and (min-width: map.get($breakPoints, sm)) {
-    font-size: map.get($font, xl);
-  }
-
-  @media only screen and (min-width: map.get($breakPoints, lg)) {
-    font-size: map.get($font, 2xl);
-  }
+  @include line-clamp(3);
+  @include font-heading-1($fontWeight: 300);
 }
 
 h2 {
-  @include truncate-lines(1);
-  font-size: map.get($font, md);
-  font-weight: 400;
+  @include line-clamp(1);
+  @include font-heading-2($fontWeight: 400);
 }

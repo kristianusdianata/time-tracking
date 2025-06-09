@@ -1,0 +1,13 @@
+@use "sass:map";
+@use "../../abstracts/index" as *;
+
+%base-card {
+  border-radius: map.get($radius, br-5);
+  overflow: hidden;
+  inline-size: 100%;
+}
+
+%background-style {
+  background-repeat: no-repeat;
+  background-size: px-to-em(77.4px);
+}

@@ -43,36 +43,32 @@
     <title>Frontend Mentor | Time tracking dashboard</title>
   </head>
   <body class="bg-navy-950">
-    <div class="container">
-      <main>
+    <main>
+      <div class="container">
         <article class="container-card">
-          <header class="card card--profile bg-navy-900">
-            <div class="header bg-purple-600">
-              <div class="header__image">
+          <section class="profile">
+            <header class="profile__header">
+              <div class="profile__image">
                 <img
                   src="./images/image-jeremy.png"
                   alt="User image"
                   class="border-ring-solid white"
                 />
               </div>
-              <h1 class="white">
-                <span
-                  class="text-pretitle font-normal navy-200"
-                  style="display: block"
-                  >Report for</span
-                >
+              <h1 class="profile__title">
+                <span class="profile__title-variant">Report for</span>
                 Jeremy Robson
               </h1>
-            </div>
-            <div class="body">
+            </header>
+            <div class="profile__menu">
               <!-- dynamic list content -->
               <!-- Using data.json to generate list content -->
             </div>
-          </header>
+          </section>
           <!-- Dynamic card content -->
           <!-- Using data.json to generate card content -->
         </article>
-      </main>
-    </div>
+      </div>
+    </main>
   </body>
 </html>

@@ -1,11 +1,4 @@
-@use "./converter" as *;
-
-/* -------------- Break point modifier --------------*/
-$breakPoints: (
-  sm: px-to-rem(600),
-  md: px-to-rem(992),
-  lg: px-to-rem(1200),
-);
+@use "./functions/index" as *;
 
 /*
 -------------------------------------------------
@@ -27,59 +20,27 @@ $colors: (
   navy-200: hsl(236, 100%, 87%),
   white: hsl(136, 0%, 100%),
 );
-/*
--------------------------------------------------
-  Color end
--------------------------------------------------
-*/
 
-/*
--------------------------------------------------
-    Font size
-    using Major Third scale ~1.25
--------------------------------------------------
-*/
-$font: (
-  xs: 0.64rem,
-  sm: 0.8rem,
-  md: 1rem,
-  lg: 1.25rem,
-  xl: 1.563rem,
-  2xl: 1.953rem,
-  3xl: 2.441rem,
-  4xl: 3.052rem,
-  5xl: 3.815rem,
-);
-/*
--------------------------------------------------
-    Font size end
--------------------------------------------------
-*/
+$baseSpaceSize: 4px;
 
 /*
 -------------------------------------------------
     Margin & padding
-    based on 4px rhythm
 -------------------------------------------------
 */
 $spacing: (
-  0: 0rem,
-  1: 0.25rem,
-  2: 0.5rem,
-  3: 0.75rem,
-  4: 1rem,
-  5: 1.25rem,
-  6: 1.5rem,
-  8: 2rem,
-  10: 2.5rem,
-  12: 3rem,
-  16: 4rem,
+  0: 0,
+  1: px-to-em($baseSpaceSize * 1),
+  2: px-to-em($baseSpaceSize * 2),
+  3: px-to-em($baseSpaceSize * 3),
+  4: px-to-em($baseSpaceSize * 4),
+  5: px-to-em($baseSpaceSize * 5),
+  6: px-to-em($baseSpaceSize * 6),
+  8: px-to-em($baseSpaceSize * 8),
+  10: px-to-em($baseSpaceSize * 10),
+  12: px-to-em($baseSpaceSize * 12),
+  16: px-to-em($baseSpaceSize * 16),
 );
-/*
--------------------------------------------------
-    Margin & padding end
--------------------------------------------------
-*/
 
 /*
 -------------------------------------------------
@@ -87,16 +48,14 @@ $spacing: (
 -------------------------------------------------
 */
 $radius: (
-  none: 0,
-  xs: 0.125rem,
-  sm: 0.25rem,
-  md: 0.5rem,
-  lg: 0.75rem,
-  xl: 1rem,
-  full: 50%,
+  br-0: 0,
+  br-1: calc($baseSpaceSize * 0.5),
+  br-2: calc($baseSpaceSize * 1),
+  br-3: calc($baseSpaceSize * 2),
+  br-4: calc($baseSpaceSize * 3),
+  br-5: calc($baseSpaceSize * 4),
+  br-6: calc($baseSpaceSize * 5),
+  br-7: calc($baseSpaceSize * 6),
+  br-8: calc($baseSpaceSize * 8),
+  br-full: 50%,
 );
-/*
--------------------------------------------------
-    Radius end
--------------------------------------------------
-*/

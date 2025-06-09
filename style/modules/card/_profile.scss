@@ -1,0 +1,66 @@
+@use "sass:map";
+@use "../../abstracts/index" as *;
+@use "../../components/index" as *;
+@use "./placeholder" as *;
+
+@mixin profile() {
+  @extend %base-card;
+  background-color: var(--navy-900);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  &__header {
+    display: flex;
+    flex-direction: row;
+    padding: map.get($spacing, 6);
+    align-items: center;
+    column-gap: map.get($spacing, 4);
+    border-end-start-radius: map.get($radius, br-5);
+    border-end-end-radius: map.get($radius, br-5);
+    background-color: var(--purple-600);
+    block-size: 100%;
+
+    @include media-query-lg() {
+      flex-direction: column;
+      align-items: start;
+      row-gap: map.get($spacing, 12);
+    }
+  }
+
+  &__image {
+    inline-size: px-to-rem(70px);
+    border: 3px solid var(--white);
+    border-radius: 50%;
+
+    @include media-query-lg() {
+      inline-size: px-to-rem(78px);
+    }
+  }
+
+  &__title {
+    color: var(--white);
+    @include line-clamp(3);
+
+    &-variant {
+      display: block;
+      font-size: px-to-em(11px);
+      font-weight: 400;
+      color: var(--navy-200);
+      @include line-clamp(1);
+
+      @include media-query-sm() {
+        font-size: px-to-em(9px);
+      }
+
+      @include media-query-lg() {
+        font-size: px-to-em(7px);
+      }
+    }
+  }
+
+  &__menu {
+    padding: map.get($spacing, 6);
+    @include list();
+  }
+}

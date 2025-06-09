@@ -1,0 +1,93 @@
+@use "sass:map";
+@use "../../abstracts/index" as *;
+@use "./profile" as *;
+@use "./time" as *;
+@use "./placeholder" as *;
+
+.container-card {
+  display: grid;
+  inline-size: 100%;
+  grid-template-columns: repeat(1, minmax(0, 1fr));
+  gap: map.get($spacing, 6);
+
+  @include media-query-sm() {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  @include media-query-md() {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  @include media-query-lg() {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+}
+
+.profile {
+  grid-column: 1;
+  grid-row: 1 / span 2;
+  @include profile();
+
+  @include media-query-sm() {
+    grid-column: 1 / span 2;
+    grid-row: 1;
+  }
+
+  @include media-query-md() {
+    grid-column: 1 / span 3;
+    grid-row: 1;
+  }
+
+  @include media-query-lg() {
+    grid-column: 1;
+    grid-row: 1 / span 2;
+  }
+}
+
+.work {
+  @extend %background-style;
+  background-image: url(../images/icon-work.svg);
+  background-position: right 20px top -10px;
+  background-color: var(--orange-300);
+  @include time();
+}
+
+.play {
+  @extend %background-style;
+  background-image: url(../images/icon-play.svg);
+  background-position: right 20px top -7px;
+  background-color: var(--blue-300);
+  @include time();
+}
+
+.study {
+  @extend %background-style;
+  background-image: url(../images/icon-study.svg);
+  background-position: right 20px top -10px;
+  background-color: var(--pink-400);
+  @include time();
+}
+
+.exercise {
+  @extend %background-style;
+  background-image: url(../images/icon-exercise.svg);
+  background-position: right 20px top 0px;
+  background-color: var(--green-400);
+  @include time();
+}
+
+.social {
+  @extend %background-style;
+  background-image: url(../images/icon-social.svg);
+  background-position: right 20px top -18px;
+  background-color: var(--purple-700);
+  @include time();
+}
+
+.self-care {
+  @extend %background-style;
+  background-image: url(../images/icon-self-care.svg);
+  background-position: right 20px top -19px;
+  background-color: var(--yellow-300);
+  @include time();
+}

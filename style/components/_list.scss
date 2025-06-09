@@ -1,19 +1,41 @@
 @use "sass:map";
 @use "../abstracts/index" as *;
 
-.list-menu {
-  display: inline-flex;
-  flex-direction: row;
+@mixin list() {
   inline-size: 100%;
-  justify-content: space-between;
 
-  @media only screen and (min-width: map.get($breakPoints, sm)) {
-    justify-content: space-around;
+  &-group {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+
+    @include media-query-md() {
+      inline-size: 50%;
+      justify-self: center;
+    }
+
+    @include media-query-lg() {
+      inline-size: 100%;
+      justify-self: start;
+      flex-direction: column;
+      row-gap: map.get($spacing, 4);
+    }
   }
 
-  @media only screen and (min-width: map.get($breakPoints, lg)) {
-    display: flex;
-    flex-direction: column;
-    row-gap: map.get($spacing, 4);
+  &-item {
+    display: inline-flex;
+  }
+
+  &-button {
+    @include font-preset-2($color: var(--purple-500), $fontWeight: 400);
+    @include line-clamp(1);
+
+    &:hover {
+      @include font-preset-2($color: var(--white), $fontWeight: 400);
+    }
+
+    &.is-active {
+      @include font-preset-2($color: var(--white), $fontWeight: 400);
+    }
   }
 }
