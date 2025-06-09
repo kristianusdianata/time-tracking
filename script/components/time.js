@@ -8,8 +8,8 @@ export async function time() {
 
   const timeData = await data();
 
-  function generateDescText($timeframe) {
-    switch ($timeframe.toLowerCase()) {
+  function generateDescText(timeframe) {
+    switch (timeframe.toLowerCase()) {
       case "daily": {
         return "Yesterday";
       }
