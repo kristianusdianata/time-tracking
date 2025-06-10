@@ -10,7 +10,7 @@ $breakPoints: (
 @mixin media-query-sm() {
   @at-root {
     @media (min-width: map.get($breakPoints, sm)) {
-      #{&} {
+      & {
         @content;
       }
     }
@@ -20,7 +20,7 @@ $breakPoints: (
 @mixin media-query-md() {
   @at-root {
     @media (min-width: map.get($breakPoints, md)) {
-      #{&} {
+      & {
         @content;
       }
     }
@@ -30,7 +30,7 @@ $breakPoints: (
 @mixin media-query-lg() {
   @at-root {
     @media (min-width: map.get($breakPoints, lg)) {
-      #{&} {
+      & {
         @content;
       }
     }
