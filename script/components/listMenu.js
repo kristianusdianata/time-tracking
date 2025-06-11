@@ -3,12 +3,12 @@ import { toCamelCase } from "../utils.js";
 
 export async function menu() {
   const menu = document.querySelector(".profile__menu");
-  let menuButtons = null;
+  let menuButtonList = null;
   const menuData = await data();
   const activeClass = "is-active";
 
-  function callbackMenu(callback) {
-    if (menuButtons && callback) callback();
+  function callback(menuButtonList, callback) {
+    if (menuButtonList && callback) callback(menuButtonList);
   }
 
   function component(isActive, title) {
@@ -38,23 +38,26 @@ export async function menu() {
     </ul>`;
 
     menu.insertAdjacentHTML("afterbegin", groupMenu);
-    menuButtons = menu.querySelectorAll(".profile__menu-button");
+    menuButtonList = menu.querySelectorAll(".profile__menu-button");
 
-    // generate card content
-    const activeMenuText = getActiveMenu().innerText.toString().toLowerCase();
-    callbackTimeContent(activeMenuText);
+    callback(menuButtonList, (menuButtonList) => {
+      // generate card content
+      const activeMenu = getActiveMenu(menuButtonList);
+      const activeMenuText = activeMenu.innerText.toString().toLowerCase();
+      callbackTimeContent(activeMenuText);
+    });
   }
 
-  function getActiveMenu() {
-    return Array.from(menuButtons).find((menuButton) =>
+  function getActiveMenu(menuButtonList) {
+    return Array.from(menuButtonList).find((menuButton) =>
       menuButton.classList.contains(activeClass)
     );
   }
 
-  function activeMenuHandler(menuButton, callbackUpdateTime) {
+  function activeMenuHandler(menuButtonList, menuButton, callbackUpdateTime) {
     if (menuButton.classList.contains(activeClass)) return;
 
-    const activeMenuElement = getActiveMenu();
+    const activeMenuElement = getActiveMenu(menuButtonList);
     activeMenuElement.classList.remove(activeClass);
 
     menuButton.classList.add(activeClass);
@@ -63,11 +66,11 @@ export async function menu() {
   }
 
   function setActiveMenu(callbackUpdateTime) {
-    callbackMenu(() => {
-      menuButtons.forEach((menuButton) => {
+    callback(menuButtonList, (menuButtonList) => {
+      menuButtonList.forEach((menuButton) => {
         menuButton.addEventListener("click", function (e) {
           e.preventDefault();
-          activeMenuHandler(menuButton, callbackUpdateTime);
+          activeMenuHandler(menuButtonList, menuButton, callbackUpdateTime);
         });
       });
     });
