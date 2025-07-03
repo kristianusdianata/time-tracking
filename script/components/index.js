@@ -1,4 +1,3 @@
-import { time } from "./time.js";
-import { menu } from "./listMenu.js";
+import { button } from "./button/index.js";
 
-export { time, menu };
+export { button };
