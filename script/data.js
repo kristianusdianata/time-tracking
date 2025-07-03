@@ -41,7 +41,7 @@ const withAssertDefined = withAssert((value) => value !== null);
  * @type {() => Promise<DataTime[] | null>}
  */
 const fetchDataTime = withErrorHandlerAsync(
-  withFetchAsync(new URL("./data.json", import.meta.url))
+  withFetchAsync(new URL("../data.json", import.meta.url))
 );
 
 /**
